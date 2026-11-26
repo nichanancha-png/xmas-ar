@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#071923">
+  <meta name="description" content="ต้นคริสต์มาส voxel หมุนได้ ผ่านกล้องมือถือ">
+  <title>Pixel Noel — AR Christmas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="stage" id="stage">
+    <video id="camera" autoplay muted playsinline></video>
+    <div class="camera-tint" aria-hidden="true"></div>
+    <canvas id="tree" aria-label="ต้นคริสต์มาสพิกเซลสามมิติหมุนได้"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Pixel Noel"><span class="brand-star">✦</span> PIXEL NOEL</a>
+      <span class="live"><i></i> AR MODE</span>
+    </header>
+
+    <section class="intro" id="intro">
+      <div class="eyebrow"><span>✳</span> HOLIDAY AR EXPERIENCE</div>
+      <h1>ต้นคริสต์มาส<br><em>จากโลกพิกเซล</em></h1>
+      <p>ต้นไม้ voxel 8-bit หมุนได้กลางกล้องมือถือ<br>ขยับโทรศัพท์เพื่อเปลี่ยนมุมมอง</p>
+      <button id="start" class="start-button"><span>✦</span> เริ่มประสบการณ์ AR</button>
+      <small id="hint">ใช้ Safari บน iPhone หรือ Chrome บน Android · อนุญาตการใช้กล้อง</small>
+    </section>
+
+    <div class="hud" id="hud" hidden>
+      <div class="hud-pill"><span class="pulse"></span> PIXEL TREE ONLINE</div>
+      <div class="hud-bottom">
+        <div><span class="hud-caption">HOLIDAY OBJECT</span><strong>NOEL // 001</strong></div>
+        <button id="flip" class="icon-button" aria-label="สลับกล้อง">↻</button>
+      </div>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
