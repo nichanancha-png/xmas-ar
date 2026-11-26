@@ -80,7 +80,9 @@
     const delta = Math.min(45, now - (treeFrame.last || now)); treeFrame.last = now;
     if (started) t += delta * .0003;
     ctx.clearRect(0,0,w,h);
-    const cx=w*.5, base=h*.76, unit=Math.min(w*.065,h*.039);
+    const cx=w*.5;
+    const unit=Math.min(w*.065,h*.039)*(started?1:.52);
+    const base=h*(started?.76:.88);
     const angle=t;
 
     // Soft pixel halo and floating snow
